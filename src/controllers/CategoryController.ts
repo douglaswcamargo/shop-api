@@ -6,7 +6,13 @@ const CategoryController = {
     Category
       .findAll()
       .then(categories => res.json(categories))
-      .catch(error => next(error))
+      .catch((error: Error) => {
+        console.log(error.message)
+        return res.status(500).json({
+          status: 'error',
+          message: 'Internal Server Error. It was not possible to create the order.'
+        })
+      })
   }
 }
 

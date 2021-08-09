@@ -6,7 +6,13 @@ const ItemController = {
     Item
       .findAll()
       .then(items => res.json(items))
-      .catch(error => next(error))
+      .catch((error: Error) => {
+        console.log(error.message)
+        return res.status(500).json({
+          status: 'error',
+          message: 'Internal Server Error.'
+        })
+      })
   }
 }
 
