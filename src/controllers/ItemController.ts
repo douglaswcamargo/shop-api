@@ -1,10 +1,11 @@
 import Item from '../database/models/item'
+import Category from '../database/models/category'
 import { Request, Response, NextFunction } from 'express'
 
 const ItemController = {
   index (req: Request, res: Response, next: NextFunction) {
-    Item
-      .findAll()
+    Category
+      .findAll({ include: Item })
       .then(items => res.json(items))
       .catch((error: Error) => {
         console.log(error.message)
