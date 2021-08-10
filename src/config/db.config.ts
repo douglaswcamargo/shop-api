@@ -23,4 +23,4 @@ const config: DbConfig = {
   dialect: 'mysql'
 }
 
-export default config
+module.exports = config

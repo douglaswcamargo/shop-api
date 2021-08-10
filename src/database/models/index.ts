@@ -1,5 +1,5 @@
 import { Sequelize } from 'sequelize'
-import config from '../../config/db.config'
+const config = require('../../config/db.config')
 
 const {
   database,
