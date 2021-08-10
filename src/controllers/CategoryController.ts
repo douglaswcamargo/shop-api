@@ -10,7 +10,7 @@ const CategoryController = {
         console.log(error.message)
         return res.status(500).json({
           status: 'error',
-          message: 'Internal Server Error. It was not possible to create the order.'
+          message: 'Internal Server Error.'
         })
       })
   }

@@ -1,6 +1,8 @@
 import routes from './routes'
+import dotenv from 'dotenv'
+import express from 'express'
 
-const express = require('express')
+dotenv.config()
 const app = express()
 const PORT = process.env.SHOP_API_PORT ?? 3333
 
