@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.ts",
     "create-db": "sequelize-cli db:drop && sequelize-cli db:create && sequelize-cli db:migrate && sequelize-cli db:seed:all",
-    "tsc": "tsc",
-    "start:prod": "node build/server.js"
+    "start": "nodemon src/index.ts",
+    "start:prod": "node build/server.js",
+    "start:docker": "npm run create-db && npm run start",
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",
