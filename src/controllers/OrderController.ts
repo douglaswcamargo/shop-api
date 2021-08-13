@@ -3,6 +3,12 @@ import { Request, Response, NextFunction } from 'express'
 import { getMissingFieldErrorMessage } from '../utils'
 
 const OrderController = {
+  /**
+   * Creates a new order entry on the db.
+   * @param  {Request} req
+   * @param  {Response} res
+   * @param  {NextFunction} next
+   */
   create (req: Request, res: Response, next: NextFunction) {
     if (!req.body.items) {
       return res.status(400).json(getMissingFieldErrorMessage('items'))

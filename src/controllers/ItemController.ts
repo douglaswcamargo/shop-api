@@ -3,6 +3,13 @@ import Category from '../database/models/category'
 import { Request, Response, NextFunction } from 'express'
 
 const ItemController = {
+  /**
+   * Returns a list with all items.
+   *
+   * @param  {Request} req
+   * @param  {Response} res
+   * @param  {NextFunction} next
+   */
   index (req: Request, res: Response, next: NextFunction) {
     Category
       .findAll({ include: Item })
