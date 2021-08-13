@@ -1,3 +1,5 @@
+This is a small REST api using Node + Express + Sequelize + MySQL.
+
 ### Starting the api
 Run the following:
 - `docker-compose build`
